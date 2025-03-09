@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  web:
+    build: .
+    container_name: test-ai-web
+    ports:
+      - "80:80"
+    restart: always
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf 
